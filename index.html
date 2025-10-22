@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background:linear-gradient( brown, orange , yellow);
+            background-attachment: fixed;
+        }
+        h1 {
+            text-align: center;
+            color: rgb(118, 118, 209);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        a {
+            text-decoration: none;
+            color: darkred;
+            font-weight: bold;
+        }
+        a:hover {
+            color: orange;
+        }
+        div {
+            margin: 10px 0;
+            padding: 10px;
+            background:radial-gradient(brown, rgb(255, 231, 186) , rgb(255, 255, 217));
+            border: 2px solid darkred;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 5px 5px 5px rgba(10, 10, 10, 10);
+            box-sizing: border-box;
+            width: 600px;
+            height: 400px;
+        }
+
+        div:hover {
+            background: radial-gradient(brown, orange , yellow);
+            transform: scale(1.02);
+            transition: transform 0.3s, background-color 0.3s;
+        }   
+        grid{
+            display: grid;
+            grid-template-columns: auto auto ;
+            grid-gap: 20px;
+            justify-content: center;
+        }
+
+        img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .Site{
+            max-width: 550px;
+            height: 350px;
+            display: block;
+            margin: 10px auto;
+            
+            
+        }
+        .waffle {
+            display: block;
+            margin: 20px auto;
+            max-width: 300px;
+            
+            
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            0% { transform: rotate(720deg); }
+        }
+        button {
+            position: fixed;
+            top: 10px;
+            background-color: rgba(243, 197, 111, 0.8);
+            border: 2px solid rgb(112, 46, 15);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            display: block;
+        }
+
+        .page{
+            position: fixed;
+            top:10px;
+            right:10px;
+            text-decoration: none;
+            background-color: rgba(243, 197, 111, 0.8);
+            border: 2px solid rgb(112, 46, 15);
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: darkred;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            background-color: rgba(243, 197, 111, 0.8);
+            padding: 10px;
+            border-top: 2px solid rgb(112, 46, 15);         
+            
+        }
+    </style>
+</head>
+<body>
+    <a class="page" href ="about.html">About</a>
+    <button  onclick="mode()">🌕</button>   
+    <h1>THE GREAT JOURNEY OF WEB DEV</h1>
+    <grid>
+    <div>
+        <a href=" https://shivsingh3108.github.io/BOBA.FROBY/">Chapter 1: Boba!!!!!!</a>
+        <img class="Site" id="Boba" src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/bb74234de8bfaf90234578b9b2b7083ed79bea35_screenshot__64_.png" alt="">
+    </div>
+    <div >
+        <a href="https://shivsingh3108.github.io/SWIRLY-SCOOPS/">Chapter 2: Swirl!!!!!!</a>
+    <img class="Site" id="Swirl" src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/bb54958d183ee7e6298a80b8a730e763c7a2a3dc_screenshot__60_.png" alt="">
+    </div>
+    <div >
+        <a href="https://shivsingh3108.github.io/ARTGALLERY/">Chapter 3: Toppings!!!!!!</a>
+        <img class="Site" src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/5dbfbb6eb93addd09ca1c0052ca9feac74ac0f02_screenshot__58_.png" alt="">
+    </div>
+    <div >
+        <a href=" https://shivsingh3108.github.io/MEOW/">Chapter 4: Grub!!!!!!</a>
+        <img id="grub" class="Site" src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/264ed282a37bfb9d5c99b36e433f1e353f9925e9_screenshot__56_.png" alt="">
+    </div>
+</grid>
+      <img  id="waffle" onclick="waffle()" src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/6e3426489980914e69dfe9461a0445ff1f1d672e_waf-removebg-preview.png" alt="">
+      
+
+    <footer>
+        <p style="text-align: center; color: darkred; font-weight: bold; margin-top: 20px;">Made by SHIV</p>
+      
+      
+    <script>
+
+     function mode(){
+        document.body.style.background="linear-gradient( black, grey , white)" ;
+        document.body.style.color="white";
+    }
+
+
+
+    alert("Welcome to the Great Journey of Web Dev! Click on the chapters to explore different web projects.");
+
+    setTimeout(() => {alert("pro tip = Click on the images and the waffle")
+        
+    }, 1000);
+    function waffle(){
+        document.getElementById("waffle").style.animation="spin 15s infinite";
+    }
+    
+    const grub = document.getElementById('grub');
+
+    let index3 = 0; 
+
+    const img2 = [
+        "https://hc-cdn.hel1.your-objectstorage.com/s/v3/264ed282a37bfb9d5c99b36e433f1e353f9925e9_screenshot__56_.png",
+"https://hc-cdn.hel1.your-objectstorage.com/s/v3/caf9fbb2844e37baed0687cf3e00ea3227d710c5_screenshot__57_.png",
+    ];
+    grub.addEventListener('click', function() {
+  index3 = (index3 + 1) % images.length;
+  grub.src = img2[index3];
+});
+
+    const Boba = document.getElementById('Boba');
+
+    let index = 0; 
+
+    const images = [
+        "https://hc-cdn.hel1.your-objectstorage.com/s/v3/11f0b2e6f80c48a6645915e4c1370da85b1d845d_screenshot__65_.png",
+        "https://hc-cdn.hel1.your-objectstorage.com/s/v3/bb74234de8bfaf90234578b9b2b7083ed79bea35_screenshot__64_.png"
+    ];
+    Boba.addEventListener('click', function() {
+  index = (index + 1) % images.length;
+  Boba.src = images[index];
+});
+   
+   const Swirl = document.getElementById('Swirl');
+    
+    let index2 = 0;
+
+    const img = [
+        "https://hc-cdn.hel1.your-objectstorage.com/s/v3/bb54958d183ee7e6298a80b8a730e763c7a2a3dc_screenshot__60_.png",
+"https://hc-cdn.hel1.your-objectstorage.com/s/v3/859c50f7d3d6c415f6b7a85378bca7c28fea4e1f_screenshot__61_.png",
+"https://hc-cdn.hel1.your-objectstorage.com/s/v3/6d4920d660e8c129acdd76fde82897a279505dd5_screenshot__62_.png",
+"https://hc-cdn.hel1.your-objectstorage.com/s/v3/28c17e4b5f729f6cbe9a0d6aff8097c24da4bdd2_screenshot__63_.png"
+    ];
+    Swirl.addEventListener('click', function() {
+  index2 = (index2 + 1) % img.length;
+  Swirl .src = img[index2];
+});
+
+  console.log("NEVER GONNA GIVE YOU UP, NEVER GONNA LET YOU DOWN!");
+    
+</script>
+
+
+</body>
+</html>
